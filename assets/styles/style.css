@@ -1,0 +1,132 @@
+@import "/assets/styles/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Permanent+Marker&display=swap");
+
+body {
+  padding: 2rem 3rem;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#bg_img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#monster_img {
+  width: 10rem;
+  height: 5rem;
+  border: 3px solid #020836;
+  box-shadow: 0 -4px 10px #5a64a1;
+}
+
+#monster-health-level {
+  width: 50rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#monster-health-level div {
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+#controls {
+  margin-top: 13rem;
+  margin-left: 3rem;
+  width: 50rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-family: "Black Han Sans", sans-serif;
+  background: linear-gradient(140deg, #5a64a1, #020836);
+  width: 11rem;
+  padding: 1rem 0;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(161, 161, 161);
+  border: 4px solid #050936;
+}
+
+button:active,
+button:hover {
+  background: linear-gradient(180deg, #ed0515, #a44e53);
+  text-shadow: 2px 2px 2px black;
+}
+
+button:focus {
+  outline: none;
+}
+
+#player-health-level {
+  align-self: flex-end;
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+h2 {
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  text-shadow: 2px 2px 4px black;
+}
+
+#bonus-life {
+  background: #5a64a1;
+  border: 3px solid #020836;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0.7rem;
+  font-size: 1rem;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2rem;
+  color: #850710;
+  border: 4px solid black;
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value] {
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #850710;
+  transition: all 0.2s ease-out;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #850710;
+  transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 1700px), screen and (min-width: 1900px) {
+  #monster-health-level,
+  #controls,
+  #player-health-level {
+    display: none;
+  }
+}
